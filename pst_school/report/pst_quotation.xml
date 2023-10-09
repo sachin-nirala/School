@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <template id="pst_quotation_inherit" inherit_id="sale.report_saleorder_document">-->
+<!--        <xpath expr="//div[@t-field='doc.partner_id']" position="replace">-->
+<!--            <div t-field="doc.partner_id" t-options='{"widget": "contact", "fields": ["phone", "name", "address"], "no_marker": True}' />-->
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_taxes']" position="replace">-->
+
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_quantity']" position="replace">-->
+<!--            <th style="border: thin solid black;" name="th_quantity" class="text-center">Qty</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_description']" position="before">-->
+<!--            <th style="border: thin solid black;" name="th_sn" class="text-left">S.No.</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_description']" position="before">-->
+<!--            <th style="border: thin solid black;" name="th_item_code" class="text-left">CODING</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_description']" position="replace">-->
+<!--            <th style="border: thin solid black;" name="th_description" class="text-left">PRIMARY DESCRIPTION</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_description']" position="after">-->
+<!--            <th style="border: thin solid black;" name="th_sec_description" class="text-left">SECONDARY DESCRIPTION</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//thead//th[@name='th_priceunit']" position="replace">-->
+<!--            <th style="border: thin solid black;white-space: nowrap;" name="th_priceunit" class="text-center">Rate</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_name']" position="before">-->
+<!--            <t t-set="count" t-value="0"/>-->
+<!--            <t t-foreach="line" t-as="no">-->
+<!--                <t t-set="count" t-value="count + 2"/>-->
+<!--                <td style="border: thin solid black;white-space: nowrap;" name="td_sn"><span t-esc="count"/></td>-->
+<!--            </t>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_name']" position="before">-->
+<!--            <td style="border: thin solid black;white-space: nowrap;" name="td_item_code"><span t-esc="line.product_id.default_code"/></td>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_name']" position="replace">-->
+<!--            <td style="border: thin solid black;white-space: nowrap;" name="td_name"><span t-esc="line.product_id.name"/></td>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_name']" position="after">-->
+<!--            <td style="border: thin solid black;white-space: nowrap;" name="td_name"><span t-esc="line.product_id.description_sale"/></td>-->
+<!--        </xpath>-->
+
+<!--        <xpath expr="//tbody//td[@name='td_taxes']" position="replace">-->
+
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_priceunit']" position="before">-->
+<!--            <td style="border: thin solid black;white-space: nowrap;" name="td_qty"><span t-esc="line.product_uom_qty"/></td>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_priceunit']" position="replace">-->
+<!--            <td style="border: thin solid black;white-space: nowrap;" name="td_priceunit"><span t-esc="line.price_unit"/></td>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_quantity']" position="replace"/>-->
+<!--        <xpath expr="//thead//th[@name='th_subtotal']" position="replace">-->
+<!--            <th style="border: thin solid black;white-space: nowrap;" name="th_subtotal" class="text-center">Amount</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//tbody//td[@name='td_subtotal']" position="replace">-->
+<!--&lt;!&ndash;            <span t-field="line.price_subtotal" />&ndash;&gt;-->
+<!--            <td groups="account.group_show_line_subtotals_tax_excluded" style="border: thin solid black;white-space: nowrap;" name="td_subtotal" class="text-right"><span t-esc="line.price_subtotal"></span></td>-->
+<!--        </xpath>-->
+<!--&lt;!&ndash;        <xpath expr="//thead//th[@name='th_subtotal']" position="replace"/>&ndash;&gt;-->
+
+<!--        <xpath expr="//div[@t-field='doc.partner_id']" position="before">-->
+<!--            <table width="100%">-->
+<!--                <tr style="height:30%">-->
+<!--                    <td align="center" valign="center">-->
+<!--                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height:45pt;max-width:90%" alt="Company Logo"/>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr style="height:70%;">-->
+<!--                    <td align="center" valign="center">-->
+<!--                        <t t-esc="doc.company_id.name"/>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--            </table>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="sale.report_saleorder_document">-->
+<!--        <span>AAAAAAAAAAAAAAAADDDDDDDDDDDDDDDDD</span>-->
+<!--    </template>-->
+
+</odoo>

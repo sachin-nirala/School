@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record id="action_report_cus" model="ir.actions.report">-->
+<!--            <field name="name">Customized</field>-->
+<!--            <field name="model">cus.module</field>-->
+<!--            <field name="report_type">qweb-pdf</field>-->
+<!--            <field name="report_name">pst_sale.report_cust</field>-->
+<!--            <field name="report_file">pst_sale.report_cust</field>-->
+<!--            <field name="print_report_name">'Certification'</field>-->
+<!--            <field name="binding_model_id" ref="model_cus_module"/>-->
+<!--            <field name="binding_type">report</field>-->
+<!--        </record>-->
+    </data>
+</odoo>

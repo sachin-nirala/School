@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="view_xls_report" model="ir.ui.view">
+            <field name="name">view_xls</field>
+            <field name="model">view.xls.report</field>
+            <field name="arch" type="xml">
+                <form string="Excel Report file">
+                    <sheet>
+                        <field filename="datas_fname" name="file_name"/>
+                        <field invisible="1" name="datas_fname"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+

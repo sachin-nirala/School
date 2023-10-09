@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--    <record model="ir.module.category" id="base.model_school_book_line">-->
+<!--        <field name="name">Student</field>-->
+<!--        <field name="description">Category for school access management</field>-->
+<!--    </record>-->
+
+<!--    <record id="group_school_student" model="res.groups">-->
+<!--        <field name="name">School</field>-->
+<!--        <field name="category_id" ref="base.model_school_book_line"/>-->
+<!--    </record>-->
+</odoo>

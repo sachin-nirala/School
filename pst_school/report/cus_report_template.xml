@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_cust">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <table class="table table-bordered" style="table-layout: fixed">
+
+                    <tbody>
+
+                        <tr>
+                            <td rowspan="5">1</td>
+                            <td colspan="4">2</td>
+                        </tr>
+                        <!--                        <tr></tr>-->
+
+                        <tr>
+                            <td rowspan="2" colspan="2">a</td>
+                            <td rowspan="4" colspan="2">c</td>
+                        </tr>
+                        <tr>
+                            <!--                                                    -->
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2" colspan="2">b</td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td rowspan="4">3</td>
+                            <td rowspan="4">3</td>
+                            <td rowspan="4">3</td>
+                            <td rowspan="2" colspan="2">3</td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td rowspan="2" colspan="2">3</td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td rowspan="8">4</td>
+                            <td rowspan="8" colspan="2" style="background-color:#3cc5c0;">
+                                <table width="100%">
+                                    <tr>
+                                        <td style="background-color:#ce75ae;" cellspacing="0">A</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ecd10f" cellspacing="0">B</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#aa1ba7;" cellspacing="0">C</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td rowspan="4" colspan="2">ksa</td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <!--                            <td rowspan="2" colspan="2">h</td>-->
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <!--                            <td rowspan="2" colspan="2">h</td>-->
+                            <td rowspan="4" colspan="2">kwq</td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <!--                            <td rowspan="2" colspan="2">h</td>-->
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td rowspan="2">h</td>
+                            <td rowspan="2">h</td>
+                            <td rowspan="2">h</td>
+                            <td rowspan="2" colspan="2">h</td>
+
+                        </tr>
+
+                        <!--                        <tr>-->
+                        <!--                            <td rowspan="2">3</td>-->
+                        <!--                            <td rowspan="2">D</td>-->
+                        <!--                            <td rowspan="2">E</td>-->
+                        <!--                            <td colspan="6">F</td>-->
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+                        <!--                            <td colspan="6">G</td>-->
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+                        <!--                            <td rowspan="8">4</td>-->
+                        <!--                            <td colspan="3" rowspan="2">H</td>-->
+                        <!--                            <td colspan="5" rowspan="3">K</td>-->
+
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td colspan="3" rowspan="2">I</td>-->
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+                        <!--                            <td colspan="5" rowspan="3">L</td>-->
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+                        <!--                            <td colspan="3" rowspan="3" >J</td>-->
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+                        <!--                            <td colspan="3" rowspan="3" >M</td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td>5</td>-->
+                        <!--                            <td>5</td>-->
+                        <!--                            <td>5</td>-->
+                        <!--                            <td colspan="2">5</td>-->
+                        <!--                        </tr>-->
+
+
+                        <!--                        <tr>-->
+                        <!--                            <td rowspan="7"></td>-->
+                        <!--                            <td rowspan="3" colspan="4"></td>-->
+                        <!--                            <td rowspan="3" colspan="2"></td>-->
+                        <!--                            <td rowspan="3" colspan="2"></td>-->
+                        <!--                            <td rowspan="3" colspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td rowspan="3" colspan="2"></td>-->
+                        <!--                            <td rowspan="2" colspan="2"></td>-->
+                        <!--                            <td rowspan="2" colspan="2"></td>-->
+                        <!--                            <td rowspan="2" colspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td rowspan="5"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td rowspan="7"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td rowspan="3"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                            <td rowspan="2"></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+                        <!--                        <tr>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                            <td></td>-->
+                        <!--                        </tr>-->
+
+
+                        <!--                        <t t-foreach="docs" t-as="doc">-->
+                        <!--                            <tr>-->
+                        <!--                                <td>-->
+                        <!--                                    <t t-esc="doc.name"/>-->
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+                        <!--                            <tr>-->
+                        <!--                                <td>-->
+                        <!--                                    <t t-esc="doc.roll_no"/>-->
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+                        <!--                            <tr>-->
+                        <!--                                <td>-->
+                        <!--                                    <t t-esc="doc.marks"/>-->
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+                        <!--                            <tr>-->
+                        <!--                                <td>-->
+                        <!--                                    <t t-esc="doc.age"/>-->
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+                        <!--                        </t>-->
+                        <!--                    </tbody>-->
+                        <!--                </table>-->
+                        <!--                <table class="table table-sm table-striped mt-4" style="border: 4px solid black;">-->
+                        <!--                    <tbody>-->
+                        <!--                        <t t-foreach="docs" t-as="doc">-->
+                        <!--                            <tr>-->
+                        <!--                                <th>S.No</th>-->
+                        <!--                                <th>Subjects</th>-->
+                        <!--                                <th>Marks</th>-->
+
+                        <!--                            </tr>-->
+                        <!--&lt;!&ndash;                            <t t-set="index" t-value="2"/>&ndash;&gt;-->
+                        <!--                            <t t-foreach="doc.marks_line_ids" t-as="line">-->
+
+                        <!--                                <tr>-->
+                        <!--                                    <td>-->
+                        <!--&lt;!&ndash;                                        <t t-foreach="doc.reference" t-as="p">&ndash;&gt;-->
+                        <!--                                            <span t-esc="line_index+1">-->
+                        <!--                                            </span>-->
+
+                        <!--                                    </td>-->
+
+
+                        <!--                                    &lt;!&ndash;                                    <td>0000000000</td>&ndash;&gt;-->
+                        <!--                                    <td>-->
+                        <!--                                        <t t-esc="line.subjects"/>-->
+                        <!--                                    </td>-->
+                        <!--                                    <td>-->
+                        <!--                                        <t t-esc="line.marks"/>-->
+                        <!--                                    </td>-->
+                        <!--                                </tr>-->
+                        <!--                            </t>-->
+                        <!--                        </t>-->
+                    </tbody>
+                </table>
+            </t>
+        </t>
+        <div class="header">
+            <div class="row">
+                <div class="col-3">
+                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                    <span>SACHIN</span>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

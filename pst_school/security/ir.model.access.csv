@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_student,school_student,model_school_student,base.group_user,1,1,1,1
+access_school_teacher,school_teacher,model_school_teacher,base.group_user,1,1,1,1
+access_school_book_line,school_book_line,model_school_book_line,base.group_user,1,1,1,1
+access_school_student_wizard,school_student_wizard,model_school_student_wizard,base.group_user,1,1,1,1
+access_school_marks_line,school_marks_line,model_school_marks_line,base.group_user,1,1,1,1
+access_view_xls_report,view_xls_report,model_view_xls_report,base.group_user,1,1,1,1

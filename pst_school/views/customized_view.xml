@@ -1,0 +1,318 @@
+<odoo>
+    <data>
+
+        <!--        #=====================tree view===================-->
+        <record id="school_student_view_tree" model="ir.ui.view">
+            <field name="name">school.student.tree</field>
+            <field name="model">school.student</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+
+                <tree decoration-success="subject == 'mathmatics' " decoration-danger="subject == 'hindi' "
+                      decoration-info="subject == 'science' " decoration-warning="subject == 'english' "
+                      string="Student" sample="1">
+                    <header>
+
+                    </header>
+
+                    <field name="reference"/>
+                    <field name="state"/>
+                    <field name="name"/>
+                    <field name="roll_no"/>
+                    <field name="present_day"/>
+                    <field name="marks" sum="Total of marks"/>
+                    <field name="date_closed"/>
+                    <field name="remarks"/>
+                    <field name="subject"/>
+                    <field name="ispass"/>
+                    <field name="date_of_birth"/>
+                    <field name="age"/>
+                    <field name="progress" widget="percentpie"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--        #==================form view==========================-->
+        <record id="school_student_view_form" model="ir.ui.view">
+            <field name="name">school.student.form</field>
+            <field name="model">school.student</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Student Form">
+                    <header>
+                        <button name="action_share_whatsapp" type="object" string="Share On Whatsapp" icon="fa-whatsapp"
+                                class="btn-primary"/>
+                        <button name="action_invoice_xls_print" type="object" string="Print Excel Report" class="btn-primary"/>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+
+                    <sheet>
+                        <field name="priority" widget="priority"/>
+
+                        <header>
+
+                            <button name="check_method" type="object" string="Test" class="btn-primary"/>
+                            <button id="button_create_student" name="%(action_create_student)d" type="action"
+                                    string="Create Student" class="btn-primary"/>
+                            <button name="state_method_conform" type="object" string="Conform" class="btn-primary"
+                                    attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                            <button name="state_method_final" type="object" string="Final" class="btn-primary"
+                                    attrs="{'invisible': [('state', '!=', 'conform')]}"/>
+                            <button name="state_method_draft" type="object" string="Draft" class="btn-primary"
+                                    attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                            <button name="add_professor" type="object" string="Add Professor" class="btn-primary"/>
+                            <button name="update_my_field" type="object" data-hotkey="l" string="Add Book"
+                                    class="btn-primary" width="80"/>F
+                            <!--                         <button class="oe_stat_button" type="object" name="get_vehicles"-->
+                            <!--                        icon="fa-car">-->
+                            <!--                        <field string="Vehicle" name="vehicle_count" widget="statinfo"/>-->
+                            <!--                    </button>-->
+
+                        </header>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="reference" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="image" widget="image" options="{'max_width': 300, 'max_height': 300}"/>
+                                <field name="name" default_focus="1" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="roll_no" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="present_day" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="marks" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'} "
+                                       attrs="{'readonly': [('state', '=', 'done')]} "
+                                       widget_options="{'avatar': true}"/>
+                                <field name="choose_one" widget="radio" options=""/>
+                            </group>
+                            <group>
+                                <field name="date_closed" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="remarks" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="subject" attrs="{'invisible': [('roll_no', '>',0)]}"/>
+                                <field name="ispass"/>
+                                <field name="teacher_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="date_of_birth" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                                <field name="age"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="fee" widget="monetary"/>
+                                <field name="my_barcode" widget="barcode"/>
+                                <field name="file"/>
+
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Book Lines" name="order_lines">
+                                <field name="book_line_ids" widget="section_and_note_one2many" mode="tree">
+                                    <tree>
+                                        <field name="name"/>
+
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Marks" name="marks_lines">
+                                <field name="marks_line_ids" widget="section_and_note_one2many" mode="tree">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="subjects"/>
+                                        <field name="marks"/>
+
+                                    </tree>
+                                </field>
+                                <field name="total_marks"/>
+                                <separator/>
+                                <field name="sub"/>
+
+
+                            </page>
+                            <page string="My notes" name="Text">
+                                <field name="note" options="{'resizable':true}"
+                                       placeholder="Enter your remarks!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <!-- ======Chatter=======-->
+
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" options="{'open_attachments': True}"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!--        # ============form view teacher =====================================================================-->
+
+        <record id="school_teacher_view_form" model="ir.ui.view">
+            <field name="name">school.teacher.form.</field>
+            <field name="model">school.teacher</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Teacher form">
+                    <sheet>
+                        <header>
+                            <button name="add_teacher" type="object" string="Add Teacher" class="btn-primary"/>
+                        </header>
+                        <group>
+                            <field name="name"/>
+                            <field name="student_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--=====================form view school books line-->
+
+        <record id="school_school_book_line_view_form" model="ir.ui.view">
+            <field name="name">school.book.line.form.</field>
+            <field name="model">school.book.line</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Teacher form">
+                    <sheet>
+                        <group>
+                            <field name="id"/>
+                            <field name="name"/>
+                            <field name="student_id"/>
+                            <field name="color" widget="color_picker"/>
+                            <field name="color_2" widget="color"/>
+                            <field name="st_tag_ids" widget="many2many_tags"/>
+                            <!--                            <field name="student_id"/>-->
+                            <field name="roll_no"/>
+
+
+                            <!--                            <field name="student_id"/>-->
+                            <!--                            <field name="author"/>-->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--        #===============search view====================-->
+
+        <record id="school_student_view_search" model="ir.ui.view">
+            <field name="name">school.student.search</field>
+            <field name="model">school.student</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="name">
+                    <field name="name"
+                           filter_domain="['|','|','|','|','|','|','|',('name','ilike',self),('roll_no','ilike',self),('present_day','ilike',self),('marks','ilike',self),('date_closed','ilike',self),('remarks','ilike',self),('subject','ilike',self),('ispass','ilike',self)]"/>
+                    <field name="roll_no"/>
+                    <field name="present_day"/>
+                    <field name="marks"/>
+                    <field name="date_closed"/>
+                    <field name="remarks"/>
+                    <field name="subject"/>
+                    <field name="ispass"/>
+                    <filter name="filter_mathmatics" string="mathmatics" domain="[('subject','=','mathmatics')]"/>
+                    <filter name="filter_english" string="english" domain="[('subject','=','english')]"/>
+                    <filter name="filter_hindi" string="hindi" domain="[('subject','=','hindi')]"/>
+                    <filter name="filter_science" string="science" domain="[('subject','=','science')]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_subject" string="subject" context="{'group_by':'subject'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!--        #==================Action=================-->
+        <record id="school_module_student" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">inline</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your Student View
+                </p>
+            </field>
+        </record>
+        <!--        #======================teacher action================-->
+        <record id="school_module_teacher_form" model="ir.actions.act_window">
+            <field name="name">Teacher</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.teacher</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your Teacher View
+                </p>
+                <p>
+                    bravooooooooooooo!
+                </p>
+            </field>
+        </record>
+        <!--                #======================book action================-->
+        <record id="school_module_school_book_line_form" model="ir.actions.act_window">
+            <field name="name">Books</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.book.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your book View
+                </p>
+                <p>
+                    woooow!
+                </p>
+            </field>
+        </record>
+
+        <!--===========================marks action ===================================-->
+        <record id="school_marks_line_form" model="ir.actions.act_window">
+            <field name="name">Marks</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.book.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your book View
+                </p>
+                <p>
+                    woooow!
+                </p>
+            </field>
+        </record>
+
+        #=======================menus======================
+        <menuitem id="school_menu_root"
+                  name="School"
+                  web_icon="pst_school,static/description/school.png"
+                  sequence="0"/>
+
+
+        <menuitem id="menu_students_details_attribute_action"
+                  name="Student Details"
+                  action="school_module_student"
+                  parent="school_menu_root"
+                  sequence="10"/>
+        <menuitem id="menu_create_student"
+                  name="Create student"
+                  action="action_create_student"
+                  parent="menu_students_details_attribute_action"
+                  sequence="20"/>
+        <menuitem id="menu_teacher_details_attribute_menu"
+                  name="Teacher details"
+                  action="school_module_teacher_form"
+                  parent="school_menu_root"
+                  sequence="30"/>
+        <menuitem id="menu_books_details_attribute_menu"
+                  name="Books"
+                  action="school_module_school_book_line_form"
+                  parent="school_menu_root"
+                  sequence="40"/>
+        <!--                  groups="group_school_student"/>-->
+
+        <menuitem id="menu_marks_attribute_menu"
+                  name="Marks"
+                  action="school_marks_line_form"
+                  parent="school_menu_root"
+                  sequence="50"/>
+    </data>
+</odoo>

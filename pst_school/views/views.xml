@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <!--        &lt;!&ndash; explicit list view definition &ndash;&gt;-->
+        <!--        <record id="view_school_student_tree" model="ir.ui.view">-->
+        <!--            <field name="name">school.student.tree</field>-->
+        <!--            <field name="model">school.student</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <tree string="Student">-->
+        <!--                    <field name="name"/>-->
+        <!--                    <field name="roll_no"/>-->
+        <!--                    <field name="today"/>-->
+        <!--                    <field name="date_closed"/>-->
+        <!--                    <field name="Marks"/>-->
+        <!--                    <field name="Subject"/>-->
+        <!--                    <field name="Ispass"/>-->
+        <!--                </tree>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+
+        <!--&lt;!&ndash;        <record id="view_school_student_tree" model="ir.ui.view">&ndash;&gt;-->
+        <!--&lt;!&ndash;            <field name="name">school.student.tree</field>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <field name="model">school.student</field>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <field name="type">tree</field>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <field name="arch" type="xml">&ndash;&gt;-->
+        <!--&lt;!&ndash;                <tree>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <group>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="name"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="roll_no"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="today"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="date_closed"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="Marks"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="Subject"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <field name="Ispass"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    </group>&ndash;&gt;-->
+        <!--&lt;!&ndash;                </tree>&ndash;&gt;-->
+        <!--&lt;!&ndash;            </field>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </record>&ndash;&gt;-->
+
+        <!--        &lt;!&ndash;==================form view================&ndash;&gt;-->
+        <!--        <record id="view_school_student_form" model="ir.ui.view">-->
+        <!--            <field name="name">school.student.form</field>-->
+        <!--            <field name="model">school.student</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <form>-->
+        <!--                    <group>-->
+        <!--                        <field name="name"/>-->
+        <!--                        <field name="roll_no"/>-->
+        <!--                        <field name="today"/>-->
+        <!--                        <field name="date_closed"/>-->
+        <!--                        <field name="Marks"/>-->
+        <!--                        <field name="Subject"/>-->
+        <!--                        <field name="Ispass"/>-->
+        <!--                    </group>-->
+        <!--                </form>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--        &lt;!&ndash; actions opening views on models &ndash;&gt;-->
+        <!--        <record id="school_module_student" model="ir.actions.act_window">-->
+        <!--            <field name="name">Student details</field>-->
+        <!--            <field name="type">ir.actions.act_window</field>-->
+        <!--            <field name="res_model">school.student</field>-->
+        <!--            <field name="view_mode">tree,form</field>-->
+        <!--            <field name="view_id" ref="view_school_student_form"/>-->
+        <!--            <field name="help" type="html">-->
+        <!--                <p class="o_view_nocontent_smiling_face">-->
+        <!--                    Create your first student details!-->
+        <!--                </p>-->
+        <!--            </field>-->
+        <!--        </record>-->
+

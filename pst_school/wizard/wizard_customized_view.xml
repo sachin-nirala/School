@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+        <record id="school_student_wizard_view_form" model="ir.ui.view">
+            <field name="name">school.student.wizard.form</field>
+            <field name="model">school.student.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create Student">
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="roll_no"/>
+                        <field name="marks"/>
+                        <field name="start"/>
+                    </group>
+                    <footer>
+                        <button name="create_student_method" type="object" string="Create" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_create_student" model="ir.actions.act_window">
+            <field name="name">Create Student</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.student.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="school_student_wizard_view_form"/>
+            <field name="target">new</field>
+        </record>
+</odoo>
